@@ -64,15 +64,19 @@ stream = twitter_stream.statuses.filter(track=QUERY,language="en")
 count = 0
 
 with io.open(OUT_FILE, 'w', encoding='utf-8', buffering=1) as f:
-    for tweet in stream:
-    	if tweet['text'].startswith("RT") == False and tweet['retweeted'] == False:
-    		if tweet['in_reply_to_screen_name'] is None:
-    			if not tweet['truncated']:
-    				if not 'media' in tweet['entities']:
-    					if not tweet['entities']['urls']:
-    						f.write(unicode(u'{0}\n'.format(json.dumps(tweet, ensure_ascii=False))))
-        					print tweet['text']
-        					count = count + 1
-        else:
-        	print("BREAKING BAD BITCHES !!!!!!")
-        	break
+	for tweet in stream:
+		if tweet['text'].startswith("RT") == False and tweet['retweeted'] == False:
+			if tweet['in_reply_to_screen_name'] is None:
+				if not tweet['truncated']:
+					if not 'media' in tweet['entities']:
+						if not tweet['entities']['urls']:
+							f.write(unicode(u'{0}\n'.format(json.dumps(tweet, ensure_ascii=False))))
+							print tweet['text']
+							count = count + 1
+		else:
+			print("########## BREAKING UP ##########")
+			if os.path.isfile(OUT_FILE):
+				if os.path.getsize(OUT_FILE) == 0:
+					os.remove(OUT_FILE)
+					print("Empty file was removed !!!")
+			break
