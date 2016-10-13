@@ -4,6 +4,23 @@ import json
 import os
 from time import gmtime, strftime
 
+
+############### READ HERE ###########################
+
+###### SCROLL DOWN AT THE BOTTOM, ENTER THE TWITTER HANDLE YOU WANT TO EXTRACT IN A VARIABLE #####
+
+############### READ ABOVE LINES ###########################
+
+
+
+
+
+
+
+
+
+
+
 #Twitter API credentials
 consumer_key = 'Ma9AEJaAT4cMM1uEQgnPXpr2c'
 consumer_secret = 'QExQVza6xDNSEIA4cB0qoYY71qHpRimMinkqhcUdhg8T5Q71z1'
@@ -85,4 +102,13 @@ def get_all_tweets(screen_name):
 		oldest = returned_tweets[-1].id - 1
 			
 
-get_all_tweets("RetardsIncorp")
+
+
+
+
+
+###### Enter the twitter handle without @
+###### example: @RetardsIncorp is written as below
+
+username = "RetardsIncorp"
+get_all_tweets(username)
