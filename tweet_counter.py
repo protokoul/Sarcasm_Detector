@@ -10,9 +10,13 @@ def fetchTweetCount(filename):
 	global path,count
 
 	fname = path + "/" + filename
-	with open(fname, 'r') as file:
-		for line in file:
-			count = count + 1
+
+	if os.path.getsize(fname) == 0:
+		os.remove(fname)
+	else:
+		with open(fname, 'r') as file:
+			for line in file:
+				count = count + 1
 
 
 def main():
