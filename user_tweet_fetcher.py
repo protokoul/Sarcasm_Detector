@@ -58,7 +58,8 @@ def writeTweetToFile(tweet_stream, screen_name):
 									else:
 										f.write(str(u'{0}\n'.format(json.dumps(tweet, ensure_ascii=False))))		
 								'''
-								f.write(str(u'{0}\n'.format(json.dumps(tweet, ensure_ascii=False))))
+								#f.write(str(u'{0}\n'.format(json.dumps(tweet, ensure_ascii=False))))
+								f.write(unicode(u'{0}\n'.format(json.dumps(tweet, ensure_ascii=False))))
 								print(tweet['text'])
 			else:
 				print("########## BREAKING UP ##########")
@@ -110,5 +111,5 @@ def get_all_tweets(screen_name):
 ###### Enter the twitter handle without @
 ###### example: @RetardsIncorp is written as below
 
-username = "RetardsIncorp"
+username = "varun067"
 get_all_tweets(username)
