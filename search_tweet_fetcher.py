@@ -66,7 +66,7 @@ try:
 					if not tweet['truncated']:
 						if not 'media' in tweet['entities']:
 							if not tweet['entities']['urls']:
-								f.write(unicode(u'{0}\n'.format(json.dumps(tweet, ensure_ascii=False))))
+								#f.write(unicode(u'{0}\n'.format(json.dumps(tweet, ensure_ascii=False))))
 								print tweet['text']
 			else:
 				print("########## BREAKING UP ##########")

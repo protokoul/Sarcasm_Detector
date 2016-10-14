@@ -16,3 +16,8 @@ Detects Sarcasm In tweets
 @Roflindian
 @KhapPanchayat
 @hamrust
+@ComedyPosts
+@SarcasmTxts
+@OneMoreJoke
+@SarcasimShit
+@sarcasticmommy4
