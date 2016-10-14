@@ -16,7 +16,7 @@ def generateFilename():
 	path = str(os.getcwd())+"/JsonTweets"
 	name = strftime("%Y-%m-%d-%H:%M:%S",gmtime())
 
-	#Checks of the directory exists or not
+	#Checks if the directory exists or not
 	if not os.path.isdir(path):
 		os.makedirs(path)
 
