@@ -11,3 +11,8 @@ Detects Sarcasm In tweets
 @RobinMcCauley
 @varun067
 @sarcastweet
+@sheikhimaan
+@Sarcasticsapien
+@Roflindian
+@KhapPanchayat
+@hamrust

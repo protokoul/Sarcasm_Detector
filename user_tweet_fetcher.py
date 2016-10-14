@@ -111,5 +111,7 @@ def get_all_tweets(screen_name):
 ###### Enter the twitter handle without @
 ###### example: @RetardsIncorp is written as below
 
-username = "sarcastweet"
-get_all_tweets(username)
+names = ["sheikhimaan", "Sarcasticsapien", "Roflindian", "KhapPanchayat", "hamrust"]
+
+for name in names:
+	get_all_tweets(name)
