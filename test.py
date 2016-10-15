@@ -1,11 +1,15 @@
-import os
 
-path = str(os.getcwd())+"/ttt"
 
-if os.path.isfile(path):
-	size = os.path.getsize(path)
-	print(size)
+names = ["sheikhimaan", "Sarcasticsapien", "Roflindian", "KhapPanchayat", "hamrust"]
+
+for name in names:
+	print(name)
+
+name = "hamrust"
+
+if name in names:
+	print("Exists")
 else:
-	print("File does not exist")
-
+	print("Non Existent")
+	pass
 
