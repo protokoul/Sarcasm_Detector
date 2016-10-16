@@ -70,7 +70,7 @@ with io.open(OUT_FILE, 'w', encoding='utf-8', buffering=1) as f:
 				if not tweet['truncated']:
 					if not 'media' in tweet['entities']:
 						if not tweet['entities']['urls']:
-							f.write(unicode(u'{0}\n'.format(json.dumps(tweet, ensure_ascii=False))))
+							#f.write(unicode(u'{0}\n'.format(json.dumps(tweet, ensure_ascii=False))))
 							print tweet['text']
 							count = count + 1
 		else:
