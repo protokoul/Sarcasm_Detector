@@ -13,7 +13,8 @@ from time import gmtime, strftime
 
 def generateFilename():
 	#path = "/home/abhishek/Desktop/twitter_machine/Test/JsonTweets"
-	path = str(os.getcwd())+"/JsonTweets"
+	#path = str(os.getcwd())+"/JsonTweets"
+	path = str(os.getcwd())+"/NonSarcTweets"
 	name = strftime("%Y-%m-%d-%H:%M:%S",gmtime())
 
 	#Checks if the directory exists or not

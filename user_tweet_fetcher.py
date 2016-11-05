@@ -111,7 +111,7 @@ def get_all_tweets(screen_name):
 ###### Enter the twitter handle without @
 ###### example: @RetardsIncorp is written as below
 
-names = ["AmishProbs", "TheGoodGodAbove", "Satan_OfficiaI", "TheTweetOfGod", "pourmecoffee", "donni"]
-
-for name in names:
+#names = ["AmishProbs", "TheGoodGodAbove", "Satan_OfficiaI", "TheTweetOfGod", "pourmecoffee", "donni"]
+get_all_tweets("SarcasmMother")
+#for name in names:
 	#get_all_tweets(name)

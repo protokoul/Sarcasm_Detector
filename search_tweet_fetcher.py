@@ -16,7 +16,8 @@ from time import gmtime, strftime
 
 def generateFilename():
 	#path = "/home/abhishek/Desktop/twitter_machine/Test/JsonTweets"
-	path = str(os.getcwd())+"/JsonTweets"
+	#path = str(os.getcwd())+"/JsonTweets"
+	path = str(os.getcwd())+"/NonSarcTweets"
 	name = strftime("%Y-%m-%d-%H:%M:%S",gmtime())
 
 	#Checks of the directory exists or not
@@ -35,7 +36,7 @@ OAUTH_TOKEN_SECRET = '8zPLJLFkrq9fUYzhsSHPuGwO1GyhReIaPWxKUMr7UYCc2'
 
 # The keyword query
 
-QUERY = '#sarcasm, #sarcastic'
+QUERY = '#happy, #blessed, #sad, #angry, #joke'
 
 # The file to write output as newline-delimited JSON documents
 OUT_FILE = generateFilename()
@@ -54,7 +55,8 @@ try:
 	tso.set_language('en')
 
 
-	print 'Filtering the public timeline for', QUERY
+	#print 'Filtering the public timeline for', QUERY
+	print('Filtering the public timeline for', QUERY)
 
 
 	tweet_stream = ts.search_tweets_iterable(tso)
@@ -66,8 +68,8 @@ try:
 					if not tweet['truncated']:
 						if not 'media' in tweet['entities']:
 							if not tweet['entities']['urls']:
-								#f.write(unicode(u'{0}\n'.format(json.dumps(tweet, ensure_ascii=False))))
-								print tweet['text']
+								f.write(unicode(u'{0}\n'.format(json.dumps(tweet, ensure_ascii=False))))
+								print(tweet['text'])
 			else:
 				print("########## BREAKING UP ##########")
 				if os.path.isfile(OUT_FILE):
@@ -78,4 +80,4 @@ try:
 
 	        
 except Exception as e:
-	print e
+	print(e)
